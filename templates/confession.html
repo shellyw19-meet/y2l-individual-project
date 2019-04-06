@@ -1,0 +1,39 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="{{url_for('static', filename='css/temp.css') }}"/>
+
+	
+</head>
+
+<body>
+	<center>
+
+<ul>
+	<li> <a href = "{{url_for('home')}}">home page</a> </li>
+	<li> <a href = "{{url_for('post')}}">upload a confession</a> </li>
+	<li> <a href = "{{url_for('confessions')}}">confessions</a> </li>
+</ul>
+	<br>
+	<h1>confessions</h1>
+	<hr>
+	<div class = "confs">
+	{%for conf in confessions%}
+
+	<div class = "conf">
+		<span>nickname: {{conf.nickname}}</span>
+		<br>
+		<span>age: {{conf.age}}</span>
+		<br>
+		<span>{{conf.confession}}</span>
+		<br>
+		<br>
+	</div>
+
+
+	{%endfor%}
+</div>
+
+</center>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="{{url_for('static', filename='css/temp.css') }}"/>
+	<title>HOME</title>
+	<style>
+	body{
+		  background-image: url("homebackground.jpg");
+	}
+	</style>
+</head>
+<body>
+	<center>
+	<ul>
+	<li> <a href = "{{url_for('home')}}">home page</a> </li>
+	<li> <a href = "{{url_for('post')}}">upload a confession</a> </li>
+	<li> <a href = "{{url_for('confessions')}}">confessions</a> </li>
+</ul>
+	<h1> <b> SECRET PALACE </b> </h1>
+	<hr>
+	<p>
+
+		here you can post whatever's on your mind, without having to be afraid of poeple's mindset about you.
+
+	</p>
+	<img src = "{{url_for('static', filename='css/secret.png') }}" width = "400" height = "400">
+	</center>
+</body>
+</html>
